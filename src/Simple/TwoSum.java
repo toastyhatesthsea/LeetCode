@@ -45,6 +45,12 @@ public class TwoSum
         boolean carry = false;
 
 
+        while (l1.next != null)
+        {
+            answer.val = l1.val;
+            l1 = l1.next;
+            answer.next = new ListNode(0);
+        }
 
 
         return answer;
