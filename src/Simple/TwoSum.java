@@ -27,16 +27,7 @@ public class TwoSum
     }
 
 
-    /**Definition for singly-linked list.
-     *
-     */
-    public class ListNode {
-        int val;
-         ListNode next;
 
-        ListNode(int x) {
-            val = x; }
-      }
 
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -94,12 +85,24 @@ public class TwoSum
     }
 }
 
+/**Definition for singly-linked list.
+ *
+ */
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x; }
+}
+
 
 class SolutionTesters
 {
     public static void main(String[] arsgs)
     {
         TwoSum rawrs = new TwoSum();
+        ListNode = new TwoSum.ListNode(1);
         rawrs.addTwoNumbers(new TwoSum.ListNode(1), new TwoSum.ListNode(1));
     }
 }
