@@ -42,7 +42,37 @@ public class TwoSum
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         ListNode answer = new ListNode(0);
+        boolean carry = false;
 
+        while (l1 != null)
+        {
+            int firstDigit = l1.val;
+            l1 = l1.next;
+
+            if (l2 != null)
+            {
+                int secondDigit = l2.val;
+
+                if (carry)
+                {
+                    answer.val = firstDigit + secondDigit + 1;
+                }
+                else
+                {
+                    answer.val = firstDigit + secondDigit;
+                }
+
+                if (answer.val > 9)
+                {
+                    answer.val = 0;
+                    carry = true;
+                }
+                else
+                {
+                    carry = false;
+                }
+            }
+        }
 
 
     }
