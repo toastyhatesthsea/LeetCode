@@ -45,23 +45,43 @@ public class TwoSum
         boolean carry = false;
         ListNode current = answer;
 
-        while (l1.next != null)
+        while (l1 != null)
         {
             answer.val = l1.val;
             l1 = l1.next;
             answer.next = new ListNode(0);
         }
 
-        while (l2.next != null)
+        while (l2 != null)
         {
             int secondDigit = l2.val;
+            int totalValue = 0;
 
             if (carry)
             {
-                current.val = 0;
+                totalValue = current.val + secondDigit + 1;
             } else
             {
+                totalValue = current.val + secondDigit;
+            }
+
+            if (totalValue > 9)
+            {
+                carry = true;
                 current.val = 0;
+                if (current.next == null)
+                {
+                    ListNode newLink = new ListNode(1);
+                    current.next = newLink;
+                }
+            }
+            else
+            {
+                carry = false;
+            }
+
+            if (l2.next == null)
+            {
 
             }
         }
