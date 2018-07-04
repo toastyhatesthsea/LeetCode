@@ -79,11 +79,6 @@ public class TwoSum
             {
                 carry = false;
             }
-
-            if (l2.next == null)
-            {
-
-            }
         }
 
         return answer;
