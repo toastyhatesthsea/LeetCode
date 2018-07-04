@@ -43,7 +43,7 @@ public class TwoSum
 
         ListNode answer = new ListNode(0);
         boolean carry = false;
-
+        ListNode current = answer;
 
         while (l1.next != null)
         {
@@ -52,6 +52,15 @@ public class TwoSum
             answer.next = new ListNode(0);
         }
 
+        while (l2.next != null)
+        {
+            int secondDigit = l2.val;
+
+            if(current.val + secondDigit > 9)
+            {
+
+            }
+        }
 
         return answer;
 
