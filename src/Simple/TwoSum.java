@@ -91,6 +91,15 @@ public class TwoSum
         }
 
         return answer;
+    }
+}
 
+
+class SolutionTesters
+{
+    public static void main(String[] arsgs)
+    {
+        TwoSum rawrs = new TwoSum();
+        rawrs.addTwoNumbers(new TwoSum.ListNode(1), new TwoSum.ListNode(1));
     }
 }
