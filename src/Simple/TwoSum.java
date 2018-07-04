@@ -82,9 +82,12 @@ public class TwoSum
                     carry = false;
                 }
             }
-
-
-
+            else
+            {
+                current = new ListNode(l2.val);
+            }
+            current = current.next;
+            l2 = l2.next;
         }
 
         return answer;
