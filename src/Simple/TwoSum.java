@@ -56,8 +56,12 @@ public class TwoSum
         {
             int secondDigit = l2.val;
 
-            if(current.val + secondDigit > 9)
+            if (carry)
             {
+                current.val = 0;
+            } else
+            {
+                current.val = 0;
 
             }
         }
