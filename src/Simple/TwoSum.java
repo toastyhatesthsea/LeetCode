@@ -71,9 +71,12 @@ public class TwoSum
                 {
                     carry = false;
                 }
+                l2 = l2.next;
             }
+            answer.next = new ListNode(0);
         }
 
+        return answer;
 
     }
 
