@@ -41,6 +41,7 @@ public class TwoSum
             answer.val = l1.val;
             l1 = l1.next;
             answer.next = new ListNode(0);
+            answer = answer.next;
         }
 
         while (l2 != null)
@@ -102,7 +103,15 @@ class SolutionTesters
     public static void main(String[] arsgs)
     {
         TwoSum rawrs = new TwoSum();
-        ListNode = new TwoSum.ListNode(1);
-        rawrs.addTwoNumbers(new TwoSum.ListNode(1), new TwoSum.ListNode(1));
+        ListNode l1 = new ListNode(2);
+        ListNode l1Head = l1;
+        l1.next = new ListNode(4);
+        l1.next.next = new ListNode(3);
+
+        ListNode l2 = new ListNode(5);
+        ListNode l2Head = l2;
+        l2.next = new ListNode(6);
+        l2.next.next = new ListNode(4);
+        rawrs.addTwoNumbers(l1Head, l2Head);
     }
 }
