@@ -57,28 +57,34 @@ public class TwoSum
             int secondDigit = l2.val;
             int totalValue = 0;
 
-            if (carry)
+            if (current != null)
             {
-                totalValue = current.val + secondDigit + 1;
-            } else
-            {
-                totalValue = current.val + secondDigit;
-            }
-
-            if (totalValue > 9)
-            {
-                carry = true;
-                current.val = 0;
-                if (current.next == null)
+                if (carry)
                 {
-                    ListNode newLink = new ListNode(1);
-                    current.next = newLink;
+                    totalValue = current.val + secondDigit + 1;
+                } else
+                {
+                    totalValue = current.val + secondDigit;
+                }
+
+                if (totalValue > 9)
+                {
+                    carry = true;
+                    current.val = 0;
+                    if (current.next == null)
+                    {
+                        ListNode newLink = new ListNode(1);
+                        current.next = newLink;
+                    }
+                }
+                else
+                {
+                    carry = false;
                 }
             }
-            else
-            {
-                carry = false;
-            }
+
+
+
         }
 
         return answer;
