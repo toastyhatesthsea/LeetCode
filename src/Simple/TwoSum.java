@@ -27,4 +27,25 @@ public class TwoSum
     }
 
 
+    /**Definition for singly-linked list.
+     *
+     */
+    public class ListNode {
+        int val;
+         ListNode next;
+
+        ListNode(int x) {
+            val = x; }
+      }
+
+
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
+        ListNode answer = new ListNode(0);
+
+
+
+    }
+
+
 }
