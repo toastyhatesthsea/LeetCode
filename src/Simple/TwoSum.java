@@ -37,11 +37,12 @@ public class TwoSum
         while (node1 != null)
         {
             answer.val = node1.val;
-            answer = answer.next;
+
             node1 = node1.next;
             if (node1 != null)
             {
-                answer = new ListNode(0);
+                answer.next = new ListNode(0);
+                answer = answer.next;
             }
         }
 
