@@ -27,10 +27,5 @@ public class Integers
         }
 
         return answer;
-
     }
-
-
-
-
 }
