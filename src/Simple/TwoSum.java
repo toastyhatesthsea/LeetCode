@@ -67,7 +67,7 @@ public class TwoSum
                 if (totalValue > 9)
                 {
                     carry = true;
-                    current.val = 0;
+                    current.val = totalValue % 10;
                     if (current.next == null)
                     {
                         ListNode newLink = new ListNode(1);
