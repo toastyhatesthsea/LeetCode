@@ -7,6 +7,7 @@ public class Integers
         int answer = 0;
         boolean isNegative = false;
 
+        //Converts to positive number
         if (x < 0)
         {
             isNegative = true;
