@@ -31,32 +31,32 @@ public class TwoSum
 
     public ListNode firstAdd(ListNode node1, ListNode node2)
     {
-        ListNode answer = new ListNode(0);
-        ListNode head = answer;
+        ListNode current = new ListNode(0);
+        ListNode head = current;
 
         while (node1 != null)
         {
-            answer.val = node1.val;
+            current.val = node1.val;
 
             node1 = node1.next;
             if (node1 != null)
             {
-                answer.next = new ListNode(0);
-                answer = answer.next;
+                current.next = new ListNode(0);
+                current = current.next;
             }
         }
 
-        answer = head;
+        current = head;
 
         while (node2 != null)
         {
-            answer.val += node2.val;
+            current.val += node2.val;
             node2 = node2.next;
-            if (node2 != null && answer.next == null)
+            if (node2 != null && current.next == null)
             {
-                answer.next = new ListNode(0);
+                current.next = new ListNode(0);
             }
-            answer = answer.next;
+            current = current.next;
         }
         return head;
     }
@@ -64,29 +64,27 @@ public class TwoSum
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-        ListNode answer = firstAdd(l1, l2);
-        ListNode head = answer;
+        ListNode current = firstAdd(l1, l2);
+        ListNode head = current;
 
-        while (answer != null)
+        while (current != null)
         {
-            if (answer.val > 9)
+            if (current.val > 9)
             {
-                int firstDigit = answer.val % 10;
-                answer.val = firstDigit;
+                int firstDigit = current.val % 10;
+                current.val = firstDigit;
 
-                if (answer.next == null)
+                if (current.next == null)
                 {
-                    answer.next = new ListNode(1);
+                    current.next = new ListNode(1);
                 }
                 else
                 {
-                    answer.next.val += 1;
+                    current.next.val += 1;
                 }
             }
-            answer = answer.next;
+            current = current.next;
         }
-
-
         return head;
     }
 }
@@ -118,7 +116,7 @@ class SolutionTesters
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
         ListNode l2Head = l2;
-        ListNode answer = rawrs.firstAdd(l1Head, l2Head);
+        ListNode answer = rawrs.addTwoNumbers(l1Head, l2Head);
 
 
         while (answer != null)
