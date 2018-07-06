@@ -90,6 +90,12 @@ public class TwoSum
                 current = current.next;
             }
 
+            if (l2.next != null)
+            {
+                current.next = new ListNode(0);
+                current = current.next;
+            }
+
             l2 = l2.next;
         }
 
