@@ -40,71 +40,7 @@ public class TwoSum
         boolean carry = false;
         ListNode current = head;
 
-        while (l1 != null)
-        {
-            answer.val = l1.val;
-            l1 = l1.next;
 
-            if (l1 != null)
-            {
-                answer.next = new ListNode(0);
-                answer = answer.next;
-            }
-        }
-
-        while (l2 != null)
-        {
-            int secondDigit = l2.val;
-            int totalValue = 0;
-
-            if (current != null)
-            {
-                if (carry)
-                {
-                    totalValue = current.val + secondDigit + 1;
-                } else
-                {
-                    totalValue = current.val + secondDigit;
-                }
-
-                if (totalValue > 9)
-                {
-                    carry = true;
-                    current.val = totalValue % 10;
-                    if (current.next == null)
-                    {
-                        ListNode newLink = new ListNode(1);
-                        current.next = newLink;
-                    }
-                }
-                else
-                {
-                    carry = false;
-                    current.val = totalValue;
-                }
-            }
-            else
-            {
-                current = new ListNode(l2.val);
-            }
-
-            if (current.next != null)
-            {
-                current = current.next;
-            }
-
-            if (l2.next != null)
-            {
-                //current.next = new ListNode(0);
-
-                if (current == null)
-                {
-                    current = new ListNode(0);
-                }
-            }
-
-            l2 = l2.next;
-        }
 
         return head;
     }
