@@ -33,6 +33,7 @@ public class TwoSum
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         ListNode answer = new ListNode(0);
+        ListNode head = answer;
         boolean carry = false;
         ListNode current = answer;
 
@@ -82,7 +83,7 @@ public class TwoSum
             l2 = l2.next;
         }
 
-        return answer;
+        return head;
     }
 }
 
