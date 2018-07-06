@@ -55,8 +55,8 @@ public class TwoSum
             if (node2 != null && answer.next == null)
             {
                 answer.next = new ListNode(0);
-                answer = answer.next;
             }
+            answer = answer.next;
         }
         return head;
     }
