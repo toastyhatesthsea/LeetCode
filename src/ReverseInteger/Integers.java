@@ -41,16 +41,3 @@ public class Integers
         return answer;
     }
 }
-
-class IntegerTesters
-{
-    public static void main(String[] argsgs)
-    {
-        Integers rawrs = new Integers();
-
-        rawrs.reverse(1534236469);
-
-    }
-
-
-}
