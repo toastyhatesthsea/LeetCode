@@ -119,5 +119,11 @@ class SolutionTesters
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
         ListNode answer = rawrs.addTwoNumbers(l1Head, l2Head);
+
+        while (answer.next != null)
+        {
+            System.out.println(answer.val);
+            answer = answer.next;
+        }
     }
 }
