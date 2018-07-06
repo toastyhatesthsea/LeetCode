@@ -35,19 +35,18 @@ public class TwoSum
         ListNode answer = new ListNode(0);
         ListNode head = answer;
         boolean carry = false;
-        ListNode current = answer;
+        ListNode current = head;
 
         while (l1 != null)
         {
             answer.val = l1.val;
             l1 = l1.next;
 
-            if (l1.next != null)
+            if (l1 != null)
             {
                 answer.next = new ListNode(0);
                 answer = answer.next;
             }
-
         }
 
         while (l2 != null)
