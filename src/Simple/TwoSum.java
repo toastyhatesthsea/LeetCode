@@ -1,5 +1,7 @@
 package Simple;
 
+import java.util.ListIterator;
+
 public class TwoSum
 {
 
@@ -29,7 +31,22 @@ public class TwoSum
 
     private ListNode firstAdd(ListNode node1, ListNode node2)
     {
+        ListNode answer = new ListNode(0);
+        ListNode head = answer;
 
+        while (node1 != null)
+        {
+            answer.val = node1.val;
+            answer = answer.next;
+            node1 = node1.next;
+        }
+
+        answer = head;
+
+        while (node2 != null)
+        {
+
+        }
     }
 
 
