@@ -64,12 +64,26 @@ public class TwoSum
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-        ListNode answer = addTwoNumbers(l1, l2);
+        ListNode answer = firstAdd(l1, l2);
         ListNode head = answer;
 
         while (answer != null)
         {
+            if (answer.val > 9)
+            {
+                int firstDigit = answer.val % 10;
+                answer.val = firstDigit;
 
+                if (answer.next == null)
+                {
+                    answer.next = new ListNode(1);
+                }
+                else
+                {
+                    answer.next.val += 1;
+                }
+            }
+            answer = answer.next;
         }
 
 
@@ -105,6 +119,7 @@ class SolutionTesters
         l2.next.next = new ListNode(4);
         ListNode l2Head = l2;
         ListNode answer = rawrs.firstAdd(l1Head, l2Head);
+
 
         while (answer != null)
         {
