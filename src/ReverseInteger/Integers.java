@@ -5,6 +5,7 @@ public class Integers
     public int reverse(int x)
     {
         int answer = 0;
+        int originalNumber = answer;
         boolean isNegative = false;
         boolean notLargerThanMaxInteger = false;
 
@@ -18,18 +19,17 @@ public class Integers
         while (x != 0 && !notLargerThanMaxInteger)
         {
             int lastDigit = x % 10; //gets last digit
-            answer = answer * 10;
-            if((answer = answer % 10) != (answer = answer + lastDigit))
+            answer = answer * 10; //expands digits by one
+            if((answer / 100) != (originalNumber / 10))
             {
                 notLargerThanMaxInteger = true;
             }
             else
             {
-                answer = (answer * 10); //expand digits by one
                 answer += lastDigit;
                 x /= 10; //reduces input number by one
             }
-
+            originalNumber = answer;
         }
 
         if (isNegative) //converts to negative if original number was negative
