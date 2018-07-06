@@ -39,7 +39,7 @@ public class TwoSum
             answer.val = node1.val;
             answer = answer.next;
             node1 = node1.next;
-            if (node1 == null)
+            if (node1 != null)
             {
                 answer = new ListNode(0);
             }
@@ -50,7 +50,12 @@ public class TwoSum
         while (node2 != null)
         {
             answer.val += node2.val;
-
+            answer = answer.next;
+            node2 = node2.next;
+            if (node2 != null && answer == null)
+            {
+                answer = new ListNode(0);
+            }
         }
     }
 
