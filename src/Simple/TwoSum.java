@@ -93,7 +93,7 @@ public class TwoSum
             if (l2.next != null)
             {
                 //current.next = new ListNode(0);
-                current = current.next;
+
                 if (current == null)
                 {
                     current = new ListNode(0);
