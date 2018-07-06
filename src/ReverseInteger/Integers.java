@@ -12,14 +12,14 @@ public class Integers
         if (x < 0)
         {
             isNegative = true;
-            x = x * -1;k
+            x = x * -1;
         }
 
         while (x != 0 && !notLargerThanMaxInteger)
         {
             int lastDigit = x % 10; //gets last digit
             answer = answer * 10;
-            if((answer = answer % 10) != lastDigit)
+            if((answer = answer % 10) != (answer = answer + lastDigit))
             {
                 notLargerThanMaxInteger = true;
             }
