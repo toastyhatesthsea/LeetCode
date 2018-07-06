@@ -18,10 +18,10 @@ public class Integers
             int lastDigit = x % 10; //gets last digit
             answer = (answer * 10); //expand digits by one
             answer += lastDigit;
-            x /= 10;
+            x /= 10; //reduces input number by one
         }
 
-        if (isNegative)
+        if (isNegative) //converts to negative if original number was negative
         {
             answer *= -1;
         }
@@ -36,7 +36,7 @@ class IntegerTesters
     {
         Integers rawrs = new Integers();
 
-        rawrs.reverse(22);
+        rawrs.reverse(120);
 
     }
 
