@@ -29,7 +29,7 @@ public class TwoSum
     }
 
 
-    private ListNode firstAdd(ListNode node1, ListNode node2)
+    public ListNode firstAdd(ListNode node1, ListNode node2)
     {
         ListNode answer = new ListNode(0);
         ListNode head = answer;
@@ -57,6 +57,7 @@ public class TwoSum
                 answer = new ListNode(0);
             }
         }
+        return head;
     }
 
 
@@ -98,7 +99,7 @@ class SolutionTesters
         l2.next = new ListNode(3);
         ListNode l2Head = l2;
 
-        ListNode answer = rawrs.addTwoNumbers(l1Head, l2Head);
+        ListNode answer = rawrs.firstAdd(l1Head, l2Head);
 
         while (answer != null)
         {
