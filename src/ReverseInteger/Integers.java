@@ -13,12 +13,12 @@ public class Integers
             x = x * -1;
         }
 
-        while (x > 10)
+        while (x != 0)
         {
             int lastDigit = x % 10; //gets last digit
             answer = (answer * 10); //expand digits by one
             answer += lastDigit;
-            x %= 10;
+            x /= 10;
         }
 
         if (isNegative)
@@ -28,4 +28,17 @@ public class Integers
 
         return answer;
     }
+}
+
+class IntegerTesters
+{
+    public static void main(String[] argsgs)
+    {
+        Integers rawrs = new Integers();
+
+        rawrs.reverse(22);
+
+    }
+
+
 }
