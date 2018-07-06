@@ -64,11 +64,13 @@ public class TwoSum
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-        ListNode answer = new ListNode(0);
+        ListNode answer = addTwoNumbers(l1, l2);
         ListNode head = answer;
-        boolean carry = false;
-        ListNode current = head;
 
+        while (answer != null)
+        {
+
+        }
 
 
         return head;
