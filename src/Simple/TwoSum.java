@@ -27,7 +27,10 @@ public class TwoSum
     }
 
 
+    private ListNode firstAdd(ListNode node1, ListNode node2)
+    {
 
+    }
 
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
