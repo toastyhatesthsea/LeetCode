@@ -84,7 +84,12 @@ public class TwoSum
             {
                 current = new ListNode(l2.val);
             }
-            current = current.next;
+
+            if (current.next != null)
+            {
+                current = current.next;
+            }
+
             l2 = l2.next;
         }
 
