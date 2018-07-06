@@ -77,6 +77,7 @@ public class TwoSum
                 else
                 {
                     carry = false;
+                    current.val = totalValue;
                 }
             }
             else
@@ -117,6 +118,6 @@ class SolutionTesters
         ListNode l2Head = l2;
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
-        rawrs.addTwoNumbers(l1Head, l2Head);
+        ListNode answer = rawrs.addTwoNumbers(l1Head, l2Head);
     }
 }
