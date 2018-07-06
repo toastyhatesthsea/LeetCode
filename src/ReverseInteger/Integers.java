@@ -7,7 +7,6 @@ public class Integers
         int answer = 0;
         int originalNumber = answer;
         boolean isNegative = false;
-        boolean notLargerThanMaxInteger = false;
 
         //Converts to positive number
         if (x < 0)
@@ -16,13 +15,15 @@ public class Integers
             x = x * -1;
         }
 
-        while (x != 0 && !notLargerThanMaxInteger)
+        while (x != 0)
         {
             int lastDigit = x % 10; //gets last digit
             answer = answer * 10; //expands digits by one
+
+            //Checks to make sure output does not exceed integer.MAX_VALUE
             if((answer / 100) != (originalNumber / 10))
             {
-                notLargerThanMaxInteger = true;
+                return 0;
             }
             else
             {
