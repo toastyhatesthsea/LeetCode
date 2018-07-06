@@ -109,11 +109,11 @@ class SolutionTesters
     public static void main(String[] arsgs)
     {
         TwoSum rawrs = new TwoSum();
-        ListNode l1 = new ListNode(2);
+        ListNode l1 = new ListNode(9);
         ListNode l1Head = l1;
 
 
-        ListNode l2 = new ListNode(5);
+        ListNode l2 = new ListNode(9);
         ListNode l2Head = l2;
 
         ListNode answer = rawrs.addTwoNumbers(l1Head, l2Head);
