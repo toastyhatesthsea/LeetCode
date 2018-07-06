@@ -41,8 +41,13 @@ public class TwoSum
         {
             answer.val = l1.val;
             l1 = l1.next;
-            answer.next = new ListNode(0);
-            answer = answer.next;
+
+            if (l1.next != null)
+            {
+                answer.next = new ListNode(0);
+                answer = answer.next;
+            }
+
         }
 
         while (l2 != null)
