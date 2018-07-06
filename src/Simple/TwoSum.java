@@ -50,11 +50,11 @@ public class TwoSum
         while (node2 != null)
         {
             answer.val += node2.val;
-            answer = answer.next;
             node2 = node2.next;
-            if (node2 != null && answer == null)
+            if (node2 != null && answer.next == null)
             {
-                answer = new ListNode(0);
+                answer.next = new ListNode(0);
+                answer = answer.next;
             }
         }
         return head;
@@ -91,14 +91,16 @@ class SolutionTesters
     public static void main(String[] arsgs)
     {
         TwoSum rawrs = new TwoSum();
-        ListNode l1 = new ListNode(0);
+        ListNode l1 = new ListNode(2);
+        l1.next = new ListNode(4);
+        l1.next.next = new ListNode(3);
         ListNode l1Head = l1;
 
 
-        ListNode l2 = new ListNode(7);
-        l2.next = new ListNode(3);
+        ListNode l2 = new ListNode(5);
+        l2.next = new ListNode(6);
+        l2.next.next = new ListNode(4);
         ListNode l2Head = l2;
-
         ListNode answer = rawrs.firstAdd(l1Head, l2Head);
 
         while (answer != null)
